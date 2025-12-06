@@ -21,6 +21,12 @@ Aplikasi mobile untuk sistem inventaris bahan makanan supermarket "Nopalmart" ya
 
 ---
 
+## 📱 Demo Aplikasi
+
+https://youtube.com/shorts/5bV11xAjRmE?feature=share
+
+---
+
 ## 🔌 Spesifikasi API
 
 ### Base URL
