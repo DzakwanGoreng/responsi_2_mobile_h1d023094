@@ -29,6 +29,11 @@ https://youtube.com/shorts/5bV11xAjRmE?feature=share
 
 ## 🔌 Spesifikasi API
 
+### Jika perli
+```
+http://[IP_ADDRESS]:8080](https://github.com/DzakwanGoreng/supermarket-api)
+```
+
 ### Base URL
 ```
 http://[IP_ADDRESS]:8080
