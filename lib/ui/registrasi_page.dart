@@ -140,11 +140,12 @@ class _RegistrasiPageState extends State<RegistrasiPage> {
                 },
               ));
     }, onError: (error) {
-      showDialog(
-          context: context,
-          barrierDismissible: false,
-          builder: (BuildContext context) => const WarningDialog(
-                description: "Registrasi gagal, silahkan coba lagi",
+      print("ERROR REGISTRASI: $error"); // Lihat di Debug Console
+  showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) => WarningDialog(
+            description: "Gagal: $error",
               ));
     });
     setState(() {

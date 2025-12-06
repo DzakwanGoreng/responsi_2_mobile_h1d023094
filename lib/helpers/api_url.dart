@@ -1,5 +1,5 @@
 class ApiUrl {
-  static const String baseUrl = 'http://192.168.56.1:8080/'; // Ganti dengan IP lokal Anda
+  static const String baseUrl = 'http://192.168.18.32:8080/'; // Ganti dengan IP lokal Anda
   static const String registrasi = baseUrl + '/registrasi';
   static const String login = baseUrl + '/login';
   static const String listInventaris = baseUrl + '/inventaris';

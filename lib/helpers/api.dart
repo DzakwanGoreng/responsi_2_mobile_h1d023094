@@ -8,14 +8,9 @@ class Api {
     var token = await UserInfo().getToken();
     var responseJson;
     try {
-      final response = await http.post(
-        Uri.parse(url),
-        body: data,
-        headers: {
-          HttpHeaders.authorizationHeader: "Bearer $token",
-          HttpHeaders.contentTypeHeader: "application/x-www-form-urlencoded", // TAMBAHKAN INI
-        }
-      );
+      final response = await http.post(Uri.parse(url),
+          body: data,
+          headers: {HttpHeaders.authorizationHeader: "Bearer $token"});
       responseJson = _returnResponse(response);
     } on SocketException {
       throw FetchDataException('No Internet connection');
@@ -27,10 +22,8 @@ class Api {
     var token = await UserInfo().getToken();
     var responseJson;
     try {
-      final response = await http.get(
-        Uri.parse(url),
-        headers: {HttpHeaders.authorizationHeader: "Bearer $token"}
-      );
+      final response = await http.get(Uri.parse(url),
+          headers: {HttpHeaders.authorizationHeader: "Bearer $token"});
       responseJson = _returnResponse(response);
     } on SocketException {
       throw FetchDataException('No Internet connection');
@@ -42,14 +35,10 @@ class Api {
     var token = await UserInfo().getToken();
     var responseJson;
     try {
-      final response = await http.put(
-        Uri.parse(url), 
-        body: data, 
-        headers: {
-          HttpHeaders.authorizationHeader: "Bearer $token",
-          HttpHeaders.contentTypeHeader: "application/json"
-        }
-      );
+      final response = await http.put(Uri.parse(url), body: data, headers: {
+        HttpHeaders.authorizationHeader: "Bearer $token",
+        HttpHeaders.contentTypeHeader: "application/json"
+      });
       responseJson = _returnResponse(response);
     } on SocketException {
       throw FetchDataException('No Internet connection');
@@ -61,10 +50,8 @@ class Api {
     var token = await UserInfo().getToken();
     var responseJson;
     try {
-      final response = await http.delete(
-        Uri.parse(url),
-        headers: {HttpHeaders.authorizationHeader: "Bearer $token"}
-      );
+      final response = await http.delete(Uri.parse(url),
+          headers: {HttpHeaders.authorizationHeader: "Bearer $token"});
       responseJson = _returnResponse(response);
     } on SocketException {
       throw FetchDataException('No Internet connection');
@@ -73,11 +60,6 @@ class Api {
   }
 
   dynamic _returnResponse(http.Response response) {
-    print("=== STATUS CODE ===");
-    print(response.statusCode);
-    print("=== RESPONSE BODY ===");
-    print(response.body);
-    
     switch (response.statusCode) {
       case 200:
         return response;
