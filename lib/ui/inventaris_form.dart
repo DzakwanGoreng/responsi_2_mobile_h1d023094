@@ -4,7 +4,6 @@ import 'package:responsi_2_mobile_h1d023094/models/inventaris.dart';
 import 'package:responsi_2_mobile_h1d023094/ui/inventaris_page.dart';
 import 'package:responsi_2_mobile_h1d023094/widget/warning_dialog.dart';
 
-// ignore: must_be_immutable
 class InventarisForm extends StatefulWidget {
   Inventaris? inventaris;
   InventarisForm({Key? key, this.inventaris}) : super(key: key);
